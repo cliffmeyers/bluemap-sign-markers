@@ -1,4 +1,4 @@
-package com.technicjelle.BlueMapSignExtractor;
+package net.histos.bluemapsignmarkers;
 
 import de.bluecolored.bluemap.core.world.mca.blockentity.SignBlockEntity;
 import org.jetbrains.annotations.NotNull;

@@ -1,4 +1,4 @@
-package com.technicjelle.BlueMapSignExtractor;
+package net.histos.bluemapsignmarkers;
 
 import com.flowpowered.math.vector.Vector2i;
 import de.bluecolored.bluemap.api.BlueMapWorld;
@@ -24,7 +24,7 @@ import java.util.TimerTask;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static com.technicjelle.BlueMapSignExtractor.BlueMapSignExtractor.logger;
+import static net.histos.bluemapsignmarkers.BlueMapSignMarkers.logger;
 
 /**
  * Watches a world for changes and updates the markers accordingly.

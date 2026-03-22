@@ -1,4 +1,4 @@
-package com.technicjelle.BlueMapSignExtractor;
+package net.histos.bluemapsignmarkers;
 
 import org.junit.jupiter.api.Test;
 

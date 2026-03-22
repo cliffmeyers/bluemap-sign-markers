@@ -1,4 +1,4 @@
-package com.technicjelle.BlueMapSignExtractor;
+package net.histos.bluemapsignmarkers;
 
 import com.flowpowered.math.vector.Vector3d;
 import de.bluecolored.bluemap.api.markers.POIMarker;

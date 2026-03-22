@@ -1,4 +1,4 @@
-package com.technicjelle.BlueMapSignExtractor;
+package net.histos.bluemapsignmarkers;
 
 import com.google.gson.Gson;
 import net.kyori.adventure.text.Component;
@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.Map;
 
-import static com.technicjelle.BlueMapSignExtractor.BlueMapSignExtractor.logger;
+import static net.histos.bluemapsignmarkers.BlueMapSignMarkers.logger;
 
 public class SignLine {
 	private static final Gson GSON = new Gson();

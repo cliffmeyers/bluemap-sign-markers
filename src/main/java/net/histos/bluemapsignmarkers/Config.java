@@ -1,4 +1,4 @@
-package com.technicjelle.BlueMapSignExtractor;
+package net.histos.bluemapsignmarkers;
 
 import com.technicjelle.BMUtils.BMNative.BMNConfigDirectory;
 import de.bluecolored.bluemap.api.BlueMapAPI;

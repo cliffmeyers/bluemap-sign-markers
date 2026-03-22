@@ -1,5 +1,5 @@
 {
 	"id": "${project.artifactId}",
-	"entrypoint": "com.technicjelle.BlueMapSignExtractor.BlueMapSignExtractor",
+	"entrypoint": "net.histos.bluemapsignmarkers.BlueMapSignMarkers",
 	"version": "${project.version}"
 }

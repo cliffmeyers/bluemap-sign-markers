@@ -1,4 +1,7 @@
-package com.technicjelle.BlueMapSignExtractor;
+package net.histos.bluemapsignmarkers;
+
+// Originally forked from TechnicJelle's BlueMapSignExtractor
+// https://github.com/TechnicJelle/BlueMapSignExtractor
 
 import com.technicjelle.BMUtils.BMCopy;
 import com.technicjelle.BMUtils.BMNative.BMNLogger;
@@ -11,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class BlueMapSignExtractor implements Runnable {
+public class BlueMapSignMarkers implements Runnable {
 	public static BMNLogger logger;
 
 	List<WorldWatcher> worldWatchers = new ArrayList<>();
@@ -34,7 +37,7 @@ public class BlueMapSignExtractor implements Runnable {
 
 	final private Consumer<BlueMapAPI> onEnableListener = api -> {
 		try {
-			BMCopy.jarResourceToWebApp(api, this.getClass().getClassLoader(), "bm-sign-marker.css", "bm-sign-marker.css", false);
+			BMCopy.jarResourceToWebApp(api, this.getClass().getClassLoader(), "bm-sign-marker.css", "bm-sign-marker.css", true);
 		} catch (IOException e) {
 			logger.logError("Failed to copy CSS to BlueMap webapp!", e);
 		}

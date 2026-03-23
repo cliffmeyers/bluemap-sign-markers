@@ -1,30 +1,38 @@
-# BlueMap Sign Extractor
+# BlueMap Sign Markers
 
-[![GitHub Total Downloads](https://img.shields.io/github/downloads/TechnicJelle/BlueMapSignExtractor/total?label=Downloads&color=success "Click here to download the plugin")](https://github.com/TechnicJelle/BlueMapSignExtractor/releases/latest)
+A [BlueMap](https://bluemap.bluecolored.de/) addon that creates group-based POI markers from in-game signs. Place a sign with a `[group]` tag on the first line (e.g., `[home]`, `[station]`, `[rip]`) and the remaining lines become a labeled marker on your BlueMap.
 
-Displays signs on your [BlueMap](https://github.com/BlueMap-Minecraft/BlueMap) as markers!
+Each unique group gets its own toggleable marker set in the BlueMap sidebar.
 
-![BlueMap screenshot of many signs with differently coloured and glowing text](.github/readme_assets/demo_all_colours.png)
-![BlueMap screenshot of eight signs rotated in different directions](.github/readme_assets/demo_sides.png)
+## Usage
 
-This is a Native BlueMap Addon, so it should be compatible with
-all platforms and all versions that BlueMap supports, including the CLI!\
-Just put the `.jar` file in BlueMap's `packs/` directory, and it should work out of the box.
+1. Place the JAR in your server's `plugins/BlueMap/packs/` directory
+2. Restart the server
+3. Place signs in-game with a group tag on the first line:
+   ```
+   [home]
+   Cliff's Base
+   Main Island
+   ```
+4. The marker appears in BlueMap under a "Home" marker set
 
-To reload this addon, just reload BlueMap itself with `/bluemap reload`.
+### Group tag format
 
-## [Click here to download!](../../releases/latest)
+- First line must be `[groupname]` where the name contains only letters, numbers, and hyphens
+- Case-insensitive: `[Home]`, `[HOME]`, and `[home]` all map to the same group
+- Lines 2-4 become the marker label and detail text
 
-## Screenshots
+## Configuration
 
-![BlueMap screenshot of one sign with all sixteen colours on it](.github/readme_assets/demo-multiple-colours-on-one-sign.png)
+Settings are in `plugins/bluemap-sign-markers/settings.conf`:
 
-| In-Game                                                                                                                                       | BlueMap with Sign Extractor                                                                                                                   |
-|-----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| ![Minecraft screenshot of many signs with various formatting and colours on multiple lines](.github/readme_assets/demo-formatting-ingame.png) | ![BlueMap screenshot of the same signs, looking almost identical to the Minecraft screenshot](.github/readme_assets/demo-formatting-bmse.png) |
+```hocon
+toggleable: true       # Whether marker sets can be toggled in the UI
+default-hidden: false  # Whether marker sets are hidden by default
+max-distance: 0        # Max camera distance to show markers (0 = always visible)
+                       # Note: must be 0 for markers to appear in flat-view mode
+```
 
-## Support
+## Acknowledgments
 
-To get support with this addon, join the [BlueMap Discord server](https://bluecolo.red/map-discord)
-and ask your questions in [#3rd-party-support](https://discord.com/channels/665868367416131594/863844716047106068).
-You're welcome to ping me, @TechnicJelle.
+This project is a fork of [BlueMapSignExtractor](https://github.com/TechnicJelle/BlueMapSignExtractor) by [TechnicJelle](https://github.com/TechnicJelle). Thank you for the excellent foundation — the world-watching, region scanning, and sign text parsing architecture made this project possible.
